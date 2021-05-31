@@ -1,0 +1,956 @@
+@media (min-width: 1200px) {
+    /* custom container bootstrap */
+    .container {
+        width: 1024px;
+    }
+    .wrap-main-menu-top-desktop .container {
+        width: 1100px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .nav-next-testimonial {
+        right: 13%;
+    }
+    .nav-prev-testimonial {
+        left: 13%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-next-testimonial {
+        right: 10px;
+        bottom: 20%;
+    }
+    .nav-prev-testimonial {
+        left: 10px;
+        bottom: 20%;
+    }
+    .slider-testimonials {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .wrap-main-menu-responsive {
+        display: block;
+    }
+    .wrap-all-sticky-menu-top {
+        display: none;
+    }
+    .item-header-background-triangle-white {
+        height: 100%;
+        padding-bottom: 35px;
+    }
+    .header-top-info-heading {
+        position: relative;
+        padding-top: 70px;
+        top: 0;
+        width: 100%;
+        left: 0;
+    }
+    .img-phone-sample-service {
+        position: relative;
+        margin-bottom: 30px;
+    }
+    .overlay-info-text-cara-kerja {
+        height: 100%;
+        margin-bottom: 10px;
+    }
+    .wrap-menu-left-cara-kerja {
+        display: block;
+        width: 100%;
+        padding-right: 0;
+    }
+    .wrap-menu-right-cara-kerja {
+        display: block;
+        width: 100%;
+        padding-left: 0;
+    }
+    .item-list-cara-kerja {
+        margin-bottom: 12px;
+    }
+    .con-icolor-repair {
+        bottom: -38px;
+        width: 15%;
+    }
+    .item-logo-sec-bot {
+        width: 120px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .wrap-all-testimonials {
+        padding-bottom: 0;
+    }
+    .wrap-heading-layanan-img {
+        position: relative;
+        bottom: 0;
+        padding-top: 70px;
+        padding-bottom: 40px;
+    }
+    .form-input-keluhan-text-box {
+        margin-bottom: 30px;
+    }
+    .item-form-input-detail-info-user-k {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .banner-tk-ava {
+        display: block;
+        padding-top: 100px;
+        text-align: center;
+    }
+    .item-header-background-triangle-white-cus-tk {
+        background: #fff !important;
+        padding-bottom: 0;
+    }
+    .wrap-sec-tab-button-s .item-sec-button-servis {
+        width: 206px;
+        font-size: 11px;
+    }
+    .box-detail-phone-m {
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .box-detail-info-phone-product-status {
+        margin: auto;
+    }
+    .item-detail-info-product-status .col-5 {}
+    .box-col-small-post {
+        float: none;
+        width: 100%;
+    }
+    .item-box-col-small-post {
+        height: 250px;
+    }
+    .box-col-big-post {
+        float: none;
+        width: 100%;
+    }
+    .item-box-col-big-post {
+        height: 250px;
+    }
+    .wrap-in-col-2-section-content {
+        text-align: center;
+    }
+    .item-col-sec-content {
+        text-align: left;
+    }
+    .wrap-in-col-2-section-sidebar {
+        margin-top: 40px;
+    }
+    a.bt-more-video-sidebar {
+        margin: auto;
+    }
+    .wrap-in-col-2-section-content-blog-single {
+        padding-right: 0;
+        text-align: left;
+    }
+    .item-box-artikel-terkait {
+        width: 50%;
+    }
+    .wrap-menu-bar-shop {
+        top: 50px;
+    }
+    .container-menu-bar-shop {
+        display: none;
+    }
+    .wrap-main-menu-top-desktop {
+        display: none;
+    }
+    .item-col-pengiriman-box {
+        float: none;
+        width: 100%;
+    }
+    .item-banner-product-2-col:nth-of-type(1) {
+        padding-right: 0;
+    }
+    .item-banner-product-2-col:nth-of-type(2) {
+        padding-left: 0;
+    }
+    .item-banner-product-2-col {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .item-content-product-2-col {
+        width: 50%;
+    }
+    .menu-bar-mobile-shop {
+        display: block;
+    }
+    .wrap-main-slider-shop-top {
+        padding-top: 103px;
+    }
+    .nav-slider-shop-prev {
+        left: 30px;
+    }
+    .nav-slider-shop-next {
+        right: 30px;
+    }
+    .item-spare-part-detail-phone-sec {
+        float: none;
+        width: 100%;
+    }
+    .wrap-content-shop-detail {
+        padding-top: 104px;
+    }
+    .wrap-main-slider-top {
+        padding-top: 48px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .head-info-desc-heading-text h3 {
+        font-size: 16px;
+    }
+    .wrap-heading-layanan-img {
+        width: 85%;
+    }
+    .item-header-background-triangle-white {
+        background-position: center bottom;
+        background-size: cover;
+        padding-bottom: 70px;
+        background: #fff !important;
+        margin-bottom: 30px;
+    }
+    .wrap-all-header-top-custom-layanan .item-header-background-triangle-white {
+        padding-bottom: 0;
+    }
+    a.bt-consultasi {
+        font-size: 11px;
+        width: 160px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin: auto;
+    }
+    .wrap-all-header-top {
+        padding-bottom: 30px;
+    }
+    h2.heading-title-now-open {
+        font-size: 25px;
+    }
+    .item-sec-button-servis {
+        width: 185px;
+        font-size: 11px;
+    }
+    .heading-title-estimate-price h3 {
+        font-size: 16px;
+    }
+    .item-device-cal-service {
+        width: 100px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .cal-service-name-device {
+        font-size: 12px;
+    }
+    h2.heading-title-cara-kerja {
+        font-size: 25px;
+    }
+    h4.heading-par-text-cara-kerja {
+        font-size: 15px;
+    }
+    h2.heading-title-sec-why-icolor {
+        font-size: 25px;
+    }
+    h3.heading-title-slider-why-icolor {
+        font-size: 18px;
+    }
+    h3.heading-title-logo-section-bot {
+        font-size: 22px;
+    }
+    h2.heading-title-section {
+        font-size: 25px;
+    }
+    .heading-title-subsection {
+        font-size: 18px
+    }
+    .item-logo-sec-bot {
+        width: 90px;
+    }
+    .section-meta-loc-time-footer {
+        width: 100%;
+        margin-bottom: 30px;
+        display: block;
+    }
+    .section-meta-link-footer {
+        display: block;
+        padding-left: 50px;
+    }
+    a.bt-cta-cara-kerja {
+        font-size: 12px;
+        width: 180px;
+    }
+    .slider-now-open .owl-dot {
+        width: 13px;
+        height: 13px;
+        margin: 5px;
+    }
+    .slider-why-icolor .owl-dot {
+        width: 13px;
+        height: 13px;
+        margin: 5px;
+    }
+    .nav-prev-testimonial {
+        font-size: 50px;
+        bottom: 35%;
+    }
+    .nav-next-testimonial {
+        font-size: 50px;
+        bottom: 35%;
+    }
+    p.text-paragrap-why-icolor {
+        width: 100%;
+    }
+    .section-item-select-kerusakan {
+        width: 100%;
+    }
+    .head-info-desc-heading-text {
+        max-width: 100%;
+        text-align: center;
+    }
+    .slider-why-icolor .owl-dots {
+        text-align: center;
+    }
+    .testimonial-info-meta {
+        padding: 10px;
+    }
+    h2.heading-title-estimasi-harga-layanan-phone1 {
+        font-size: 17px;
+    }
+    h2.heading-title-estimasi-harga-layanan-phone2 {
+        font-size: 27px;
+    }
+    h3.name-selected-phone-list-k {
+        font-size: 17px;
+    }
+    ul.heading-kerusakan-title-list li {
+        font-size: 15px;
+    }
+    h2.heading-title-detail-price-kerusakan {
+        font-size: 25px;
+    }
+    h4.desc-title-post-info {
+        font-size: 15px;
+    }
+    .box-select-jenis-pelayanan2 {
+        margin-left: 0;
+    }
+    .box-select-jenis-pelayanan {
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+    .heading-title-bar-tab {
+        font-size: 15px;
+    }
+    .heading-main-title-tab-list-head {
+        font-size: 15px;
+    }
+    .item-list-title-kerusakan-detail {
+        font-size: 12px;
+    }
+    .wrap-all-header-top-custom-layanan {
+        padding-bottom: 2px !important;
+    }
+    .wrap-detail-price-kerusakan {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    h2.title-price-total-detail {
+        margin-bottom: 30px;
+    }
+    .item-form-input-detail-info-user-k-f2 {
+        margin-bottom: 20px;
+    }
+    .icon-add-remove-kerusakan-cus {
+        right: 21px;
+        bottom: 40px;
+    }
+    .f-item-name-input {
+        float: none;
+        width: 100%;
+        padding-top: 0;
+        margin-bottom: 6px;
+    }
+    .f-item-form-input-hub {
+        margin-left: 0;
+    }
+    .bt-submit-hub-kami {
+        margin: auto;
+    }
+    .form-item-pesan-hub-kami {
+        margin-bottom: 15px;
+    }
+    .item-col-2-form-maps {
+        margin-bottom: 30px;
+    }
+    .box-whats-app-section {
+        width: 150px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .img-b-wh-section {
+        width: 70px;
+    }
+    .number-info-app-section {
+        font-size: 14px;
+    }
+    .wrap-icon-wa-phone {
+        margin-bottom: 15px;
+    }
+    .wrap-all-header-top-custom-tentang-kami .item-header-background-triangle-white {
+        padding-bottom: 0;
+    }
+    .input-form-cek-tracking-id-cus2 {
+        width: 350px;
+    }
+    .wrap-sec-tab-button-s .item-sec-button-servis {
+        font-size: 9px;
+        width: 32.222%;
+    }
+    .box-detail-info-phone-product-status {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .accordion-tab {
+        font-size: 15px;
+        padding-left: 20px;
+    }
+    .tab-content-show p {
+        font-size: 13px;
+    }
+    .tab-content-show {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .panel-tab {
+        padding: 0;
+    }
+    .item-col-sec-content {
+        display: block;
+        width: 100%;
+    }
+    h2.main-title-blog-post {
+        font-size: 22px;
+    }
+    .meta-blog-post-single {
+        margin-bottom: 20px;
+    }
+    .item-box-artikel-terkait {
+        width: 100%;
+    }
+    .meta-blog-post-date-views {
+        font-size: 14px;
+    }
+    .item-list-sidebar-video-blog-meta {
+        font-size: 15px;
+    }
+    .wrap-item-video-play {
+        width: 50%;
+    }
+    .heading-title-detail-product {
+        font-size: 22px;
+    }
+    h2.title-detail-price-product {
+        font-size: 25px;
+    }
+    .bt-cta-buy-add {
+        width: 130px;
+        font-size: 14px;
+    }
+    h4.title-description-detail-product {
+        font-size: 17px;
+    }
+    ul.list-detail-product-info li {
+        font-size: 14px;
+    }
+    .item-list-spek-product {
+        font-size: 14px;
+    }
+    h4.title-info-spesifikasi-detail {
+        font-size: 14px;
+    }
+    h4.title-product-meta-c {
+        font-size: 14px;
+    }
+    h3.product-title-price-col {
+        font-size: 17px;
+    }
+    .heading-title-product-2-col {
+        font-size: 21px;
+    }
+    .bt-quantity-min-product {
+        width: 38px;
+        padding-top: 7px;
+        padding-bottom: 6px;
+    }
+    .bt-quantity-plus-product {
+        width: 38px;
+        padding-top: 7px;
+        padding-bottom: 6px;
+    }
+    .input-form-quantity-product {
+        width: 39px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+    .item-box-apple-product-shop {
+        width: 50%;
+    }
+    .i-form-input-title {
+        float: none;
+        padding-top: 0;
+        margin-bottom: 7px;
+    }
+    .i-form-input-answer {
+        margin-left: 0;
+    }
+    .i-form-input-answer2 {
+        margin-left: 0;
+    }
+    .i-form-input-answer input {
+        width: 100%;
+    }
+    .i-form-input-answer textarea {
+        width: 100%;
+    }
+    .content-detail-shop-content {
+        padding-bottom: 0;
+    }
+    .wrap-bt-favorite-product {
+        position: relative;
+        right: 0;
+        margin-bottom: 10px;
+    }
+    .table-product-list-chart tr td {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    h3.price-title-detail-pro-tab {
+        font-size: 14px;
+    }
+    h3.price-detail-pro-tab {
+        font-size: 13px;
+    }
+    .img-pro-detail-table {
+        width: 60px;
+    }
+    .img-pro-detail-table-text {
+        margin-left: 70px;
+        padding-top: 6px;
+    }
+    .product-info-price-title span {
+        font-size: 14px;
+    }
+    .product-info-quantity-title span {
+        font-size: 14px;
+    }
+    .total-all-price-detail {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 640px) {}
+
+@media screen and (max-width: 600px) {
+    .testimonial-info-meta h4 {
+        font-size: 13px;
+        line-height: 13px;
+    }
+    .testimonial-info-meta h3 {
+        font-size: 14px;
+    }
+    .testimonial-avatar {
+        width: 150px;
+        height: 150px;
+    }
+    .testimonial-info-meta {
+        height: 150px;
+        margin-left: 150px;
+    }
+    .item-logo-sec-bot {
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-bottom: 20px;
+    }
+    .con-icolor-repair {
+        bottom: -27px;
+    }
+    .banner-cara-kerja {
+        height: 300px;
+    }
+    .wrap-content-cara-kerja-skew {
+        margin-top: -60px;
+    }
+    .item-device-cal-service {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2.heading-title-now-open {
+        font-size: 21px;
+    }
+    h2.heading-title-cara-kerja {
+        font-size: 21px;
+    }
+    .meta-text-cara-kerja h3 {
+        font-size: 16px;
+    }
+    h2.heading-title-sec-why-icolor {
+        font-size: 21px;
+    }
+    h2.heading-title-cara-kerja {
+        font-size: 21px;
+    }
+    h3.heading-title-logo-section-bot {
+        font-size: 19px;
+    }
+    .item-logo-sec-bot {
+        margin-left: 7px;
+        margin-right: 7px;
+        width: 75px;
+    }
+    .item-slide-testimonials {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .slider-testimonials {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .nav-prev-testimonial {
+        bottom: 30%;
+    }
+    .nav-next-testimonial {
+        bottom: 30%;
+    }
+    .head-info-desc-heading-text p {
+        font-size: 13px;
+        line-height: 17px;
+    }
+    .head-info-desc-heading-text h3 {
+        margin-bottom: 10px;
+    }
+    h4.title-info-location-open {
+        font-size: 14px;
+    }
+    h4.heading-par-text-cara-kerja {
+        font-size: 14px;
+    }
+    .meta-text-cara-kerja p {
+        font-size: 13px;
+        line-height: 17px;
+    }
+    p.text-paragrap-why-icolor {
+        font-size: 13px;
+        line-height: 17px;
+    }
+    ul.list-item-why-icolor li {
+        font-size: 13px;
+        line-height: 17px;
+    }
+    p.p-title-text-footer {
+        line-height: 17px;
+        font-size: 11px;
+    }
+    h4.title-location-icolor {
+        font-size: 14px;
+    }
+    h4.title-location-icolor {
+        font-size: 14px;
+    }
+    .sec-f-link-menu a {
+        font-size: 14px;
+    }
+    .title-sec-meta-link-footer {
+        font-size: 14px;
+    }
+    .logo-footer {
+        width: 100px;
+    }
+    .footer-copyright {
+        font-size: 11px;
+    }
+    .item-device-cal-service {
+        width: 80px;
+    }
+    .box-name-phone-choose {
+        font-size: 12px;
+    }
+    h2.heading-title-section {
+        font-size: 21px;
+    }
+    .item-select-kerusakan {
+        width: 105px;
+        margin-left: 11px;
+        margin-right: 11px;
+    }
+    .icon-add-remove-kerusakan {
+        right: 10px;
+        bottom: 26px;
+    }
+    .img-select-kerusakan {
+        padding: 13px;
+    }
+    .arrow-down {
+        border-left: 13px solid transparent;
+        border-right: 13px solid transparent;
+        border-top: 13px solid #000;
+    }
+    .arrow-down {
+        border-left: 9px solid transparent;
+        border-right: 9px solid transparent;
+        border-top: 9px solid #000;
+    }
+    .icon-next-estimate2-cus {
+        width: 40px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+    .icon-next-estimate2 {
+        width: 40px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+    h3.title-info-kerusakan {
+        font-size: 11px;
+    }
+    .text-estimasi-harga-title-bot {
+        font-size: 17px;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .input-text-estimasi-harga {
+        margin-left: 0;
+        text-align: center;
+        font-size: 15px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    .item-estimasi-harga-kerusakan {
+        margin-bottom: 10px;
+    }
+    .bt-lanjutkan-info-kerusakan a {
+        width: 270px;
+        font-size: 14px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .warna-tipe-device {
+        font-size: 14px;
+    }
+    .wrap-estimasi-harga {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .wrap-section-item-select-kerusakan {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .in-section-phone-choose {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .img-phone-sample-service {
+        width: 170px;
+    }
+    .header-img-phone-top {
+        width: 60%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .banner-cara-kerja {
+        height: 200px;
+    }
+    .item-sec-phone-choose {
+        width: 90px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .slider-section-phone-choose {
+        height: 323px;
+    }
+    .in-section-phone-choose {
+        width: 90%;
+    }
+    .select-mn-warna select {
+        font-size: 15px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    .wrap-content-cara-kerja-skew {
+        /*padding-bottom: 40px;*/
+    }
+    .wrap-section-why-icolor-unskew {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    h2.heading-title-detail-price-kerusakan {
+        font-size: 21px;
+    }
+    h4.desc-title-post-info {
+        font-size: 14px;
+    }
+    .f-item-name-input {
+        font-size: 15px;
+    }
+    .bt-submit-hub-kami {
+        font-size: 15px;
+    }
+    h3.title-text-info-page {
+        font-size: 17px;
+    }
+    h4.title-small-page-info {
+        font-size: 14px;
+    }
+    .col2-form-maps {
+        margin-bottom: 20px;
+    }
+    ul.list-item-misi-title li {
+        font-size: 14px;
+    }
+    ul.list-item-misi-title {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .item-tem-big-info-ava {
+        margin-bottom: 140px;
+    }
+    .wrap-team-big-info-ava2 .item-tem-big-info-ava {
+        margin-bottom: 110px;
+    }
+    .wrap-team-big-info-ava3 .item-tem-big-info-ava {
+        margin-bottom: 90px;
+    }
+    .wrap-team-big-info-ava2 {
+        margin-bottom: 30px;
+    }
+    .wrap-detail-team {
+        padding-top: 155px;
+        padding-bottom: 0;
+    }
+    .item-tem-big-info-ava {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    h4.title-location-store-r {
+        width: 100%;
+        font-size: 15px;
+    }
+    h4.title-location-store-number {
+        font-size: 16px;
+    }
+    h4.title-location-store-number img {
+        width: 23px;
+    }
+    a.bt-lihat-lokasi-store {
+        font-size: 14px;
+    }
+    .wrap-sec-tab-button-s .item-sec-button-servis {
+        height: 52px;
+    }
+    .input-form-cek-tracking-id-cus2 {
+        width: 240px;
+    }
+    .search-button-submit-status {
+        width: 63px;
+    }
+    .box-name-info-detail-status {
+        font-size: 13px;
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+    .box-name-info-detail-status2 {
+        font-size: 13px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .bt-submit-form-cek-id {
+        font-size: 14px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .f-input-cek-id {
+        font-size: 14px;
+    }
+    .button-search-status-id {
+        font-size: 18px;
+    }
+    .accordion-tab:after {
+        font-size: 21px;
+        width: 27px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+    ul.list-item-kebijakan-privasi ul ul {
+        padding-left: 20px;
+    }
+    ul.list-item-kebijakan-privasi ul li {
+        margin-bottom: 30px;
+    }
+    ul.list-item-kebijakan-privasi ul {
+        padding-left: 0;
+    }
+    .wrap-item-video-play {
+        width: 100%;
+    }
+    .icon-play-vid {
+        top: 40%;
+    }
+    .heading-title-product-2-col {
+        font-size: 22px;
+    }
+    h4.title-product-meta-c {
+        font-size: 14px;
+    }
+    h3.product-title-price-col {
+        font-size: 17px;
+    }
+    .breadcumb-back-beranda {
+        font-size: 14px;
+    }
+    .breadcumb-back-beranda {
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+    .item-main-slider-1-image-full {
+        display: none;
+    }
+    .item-main-slider-1-image-mobile {
+        display: block;
+    }
+    .nav-main-slider-top-prev {
+        left: 15px;
+        top: 48%;
+    }
+    .nav-main-slider-top-next {
+        right: 15px;
+        top: 48%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .item-sec-button-servis {
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .call-center-responsive {
+        font-size: 13px;
+    }
+    .logo-resposinve {
+        width: 89px;
+    }
+}
+
+@media screen and (max-width: 320px) {}
