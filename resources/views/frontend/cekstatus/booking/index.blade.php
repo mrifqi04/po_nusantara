@@ -42,18 +42,27 @@
                                 <td>
                                     {{ date('j F, Y', strtotime($item->tanggal)) }} <br>
                                     Jam-{{ $item->jam->jam }}
-                                </td>
+                                </td>       
                                 <td>
-                                    @if ($item->status == 'PENDING')
-                                        <a class="pending-btn scrollto">
-                                            <span class="d-none d-md-inline">PENDING</span>
-                                        </a>
-                                    @elseif ($item->status == 'ACCEPTED')
-                                        <a class="accepted-btn scrollto">
-                                            <span class="d-none d-md-inline">ACCEPTED</span>
-                                        </a>
-                                    @endif	
-                                </td>                                
+                                    @if($item->status == 'PENDING')                                        
+                                        Sedang menunggu konfirmasi dari Admin                                        
+                                    @elseif($item->status == 'ACCEPTED')                                        
+                                        <form action="/user/payment/{{ $item->id }}" method="post" enctype="multipart/form-data">
+                                            {{ csrf_field() }}
+                                            <p>Pesanan diterima, <br> mohon upload bukti pembayaran</p>
+                                            <input type='file' name='payment' id='file' class='form-control'> <br>                       
+                                            <button type="submit" class="mb-2 btn btn-sm btn-primary">
+                                                Upload
+                                            </button>
+                                        </form>                                        
+                                    @elseif($item->status == 'VERIFYING')                                    
+                                        Sedang menunggu konfirmasi <br> pembayaran dari Admin                                        
+                                    @elseif($item->status == 'CONFIRMED')
+                                        Pembayaran diterima,<br>mohon menghadiri janji tepat waktu
+                                    @else
+                                        <a href="{{asset('uploads')}}/{{ $item->payment }}" target="_blank">Lihat </a>
+                                    @endif  
+                                </td>                                                                                                
                             </tr>
                         @endforeach                              
                             
@@ -64,6 +73,6 @@
             </div>            
         </div>
     </div>
-    </div>
+    </div>    
 
 @endsection

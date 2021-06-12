@@ -58,14 +58,16 @@
 															@if ($item->status == 'PENDING')
 																<span class="badge badge-warning p-2">Pending</span>
 															@elseif ($item->status == 'ACCEPTED')
-																<span class="badge badge-primary p-2">ACCEPTED</span>															
+																<span class="badge badge-primary p-2">ACCEPTED</span>
+															@elseif ($item->status == 'VERIFYING')
+																<a class="badge badge-primary" href="{{asset('uploads/payments')}}/{{ $item->payment }}" target="_blank">Dibayar</a>
 															@endif	
 														</td>
 														<td class="text-left" align="center">
 															<div class="table-action">															
 															<button type="button" class="btn btn-sm btn-{{ $item->status == 'PENDING' ? 'primary' : 'success' }}"  data-toggle="modal" data-target="#edit-Booking{{ $item->id }}" >
 																<span class="lnr lnr-eye"></span>
-																{{ $item->status == 'PENDING' ? 'Accept' : 'Done' }}
+																{{ $item->status == 'PENDING' ? 'Accept' : ($item->status == 'VERIFYING' ? 'Confirm' : 'Done')   }}
 															</button>															
 															<button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteConfirm{{$item->id}}"><span class="lnr lnr-trash">Delete</span></button>
 															<div class="modal fade" id="edit-Booking{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -74,7 +76,7 @@
 																		<!-- Modal body -->
 																		<div class="modal-body style-add-modal">
 																			<button type="button" class="close" data-dismiss="modal">&times;</button>
-																			<h4 class="modal-title mb-3">{{ $item->status == 'PENDING' ? 'Terima Booking' : 'Konsultasi Selesai' }}</h4>
+																			<h4 class="modal-title mb-3">{{ $item->status == 'PENDING' ? 'Terima Booking' : ($item->status == 'VERIFYING' ? 'Pembayaran Diterima' :  'Konsultasi Selesai') }}</h4>
 																			@if ($errors->any())
 																			<div class="alert alert-danger alert-dismissible fade in" role="alert">
 																				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
@@ -91,7 +93,7 @@
 																				'before' => 'csrf'
 																			]) !!}
 													
-																				@include ('admin.booking.edit', ['formMode' => $item->status == 'PENDING' ? 'Accept' : 'Done'])
+																				@include ('admin.booking.edit', ['formMode' => $item->status == 'PENDING' ? 'Accept' : ($item->status == 'VERIFYING' ? 'Confirm' : 'Done' )])
 													
 																			{!! Form::close() !!}
 																			

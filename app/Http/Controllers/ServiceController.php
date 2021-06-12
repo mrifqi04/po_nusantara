@@ -17,13 +17,20 @@ class ServiceController extends Controller
     function store(Request $request) {
         
         // Validate Request
-        $request->validate(['nama_service' => 'required']);
+        $request->validate([
+            'nama_service' => 'required',
+            'deskripsi' => 'required'
+        ]);
+
         // Store request
         $serviceData = $request->all();
+
         // Create Service
         Service::create($serviceData);
+
         // Create Messages
         $request->session()->flash('msg','Your service has been added');
+
         // Redirecting back to service lists
         return redirect('/admin/services');
     }
@@ -40,11 +47,13 @@ class ServiceController extends Controller
         $service = Service::find($id);
         // Validate data from front
         $request->validate([
-            'nama_service' => 'required',                      
+            'nama_service' => 'required', 
+            'deskripsi' => 'required'                     
         ]);
         // Updating data
         $service->update([
-            'nama_service' => $request->nama_service,                      
+            'nama_service' => $request->nama_service,    
+            'deskripsi' => $request->deskripsi                  
         ]);
         // Creating message success
         $request->session()->flash('msg','Your cabang has been updated');

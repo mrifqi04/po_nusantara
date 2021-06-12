@@ -38,6 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/user/booking-request', [HomeController::class, 'bookingRequest']);
     Route::get('/user/booking', [HomeController::class, 'bookingStatus']);
     Route::get('/user/transaksi', [HomeController::class, 'transaksiStatus']);
+    Route::post('user/payment/{id}', [HomeController::class, 'payment']);
 });
 
 Route::prefix('admin')->group(function() {

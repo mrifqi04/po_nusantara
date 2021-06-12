@@ -65,6 +65,8 @@ class HomeController extends Controller
          ->where('user_id', Auth::user()->id)
          ->where('status', 'PENDING')
          ->orWhere('status', 'ACCEPTED')
+         ->orWhere('status', 'VERIFYING')
+         ->orWhere('status', 'CONFIRMED')
          ->get();
 
          
@@ -85,5 +87,22 @@ class HomeController extends Controller
 
         // Directing to template with data
         return view('frontend.cekstatus.transaksi.index', $data, compact('transactions'));
+   }
+
+   function payment(Request $request, $id) {
+        $booking = Booking::find($id);
+        if ($request->hasFile('payment')) {
+            $payment = $request->payment;
+            $payment->move('uploads/payments', $payment->getClientOriginalName());
+            $booking->payment = $request->payment->getClientOriginalName();
+        }
+
+        $booking->update([
+            'payment' => $booking->payment,
+            'status' => 'VERIFYING'
+        ]);
+
+        $request->session()->flash('msg', 'Wait for your payment to verified by Admin');
+        return redirect()->back();
    }
 }
