@@ -13,7 +13,7 @@ class HomeController extends Controller
 {
     function index() {
 
-        $jams = JamOperasional::all();
+        $jams = JamOperasional::all();        
         $services = Service::all();
 
         return view('frontend.homepage', compact('jams', 'services'));
@@ -30,7 +30,7 @@ class HomeController extends Controller
             'service_id' => 'required',
         ]);
 
-        $booking = Booking::create([
+        Booking::create([
             'user_id' => Auth::user()->id,
             'name' => $request->name,
             'email' => $request->email,
@@ -67,9 +67,7 @@ class HomeController extends Controller
          ->orWhere('status', 'ACCEPTED')
          ->orWhere('status', 'VERIFYING')
          ->orWhere('status', 'CONFIRMED')
-         ->get();
-
-         
+         ->get();                          
  
          // Directing to template with data
          return view('frontend.cekstatus.booking.index', compact('bookings'));

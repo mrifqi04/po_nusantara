@@ -18,7 +18,6 @@ class AdminController extends Controller
     }
 
     function store(Request $request) {
-        // dd($request);
         $this->validate($request, [
             'email' => 'required',
             'password' => 'required',
@@ -28,7 +27,7 @@ class AdminController extends Controller
             'email' => $request->email, 
             'password' => $request->password
         ];
-
+        // dd(Auth::attempt($userData), $request);
         if(Auth::attempt($userData)){
             $auth = Auth::user()->role_id;
             if ($auth  == 1 || $auth  == 3 || $auth  == 4) {
