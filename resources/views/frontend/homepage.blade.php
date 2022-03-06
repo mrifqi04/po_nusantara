@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('title', 'Mitra Bidan | Homepage')
+@section('title', 'PO Nusantara | Homepage')
 
 @section('content')
 
@@ -21,7 +21,7 @@
     <!-- End Why Us Section -->
 
     <!-- ======= About Section ======= -->
-      @include('partials.frontend.about')
+      {{-- @include('partials.frontend.about') --}}
     <!-- End About Section -->    
 
     <!-- ======= Services Section ======= -->
