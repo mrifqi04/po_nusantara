@@ -13,20 +13,13 @@ class Booking extends Model
         'user_id',
         'name',
         'email',
-        'phone',
-        'tanggal',
-        'jam_id',
-        'service_id',
-        'dokter_id',
-        'status',
-        'messages'  
+        'phone',                
+        'service_id',        
+        'payment',
+        'status'       
     ];
 
     function service() {
         return $this->hasOne(Service::class,'id','service_id');
-    }
-
-    function jam() {
-        return $this->hasOne(JamOperasional::class,'id','jam_id');
     }
 }

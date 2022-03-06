@@ -1,131 +1,127 @@
 <section id="appointment" class="appointment section-bg">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Make an Appointment</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+  <div class="container">
+    <div class="section-title">
+      <h2>Make a Trip</h2>
+      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in
+        iste officiis commodi quidem hic quas.</p>
+    </div>
+    <div class="row">
+      <div class="col-md-4 form-group">
+        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4"
+          data-msg="Please enter at least 4 chars">
+        <div class="validate"></div>
+      </div>
+      <div class="col-md-4 form-group mt-3 mt-md-0">
+        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email"
+          data-msg="Please enter a valid email">
+        <div class="validate"></div>
+      </div>
+      <div class="col-md-4 form-group mt-3 mt-md-0">
+        <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4"
+          data-msg="Please enter at least 4 chars">
+        <div class="validate"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 form-group mt-3">
+        <select name="depature" id="input_depature" class="form-select" onchange="updateServiceList()">
+          <option value="">Lokasi Keberangkatan</option>
+          @foreach ($depatures as $depature)
+          <option value="{{ $depature->depature }}">{{ $depature->depature }}</option>
+          @endforeach
+        </select>
+        <div class="validate"></div>
       </div>
 
-      <form action="/user/booking-request" method="post" role="form" class="php-email-form">
-        @csrf
-        <div class="row">
-          <div class="col-md-4 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-            <div class="validate"></div>
-          </div>
-          <div class="col-md-4 form-group mt-3 mt-md-0">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
-            <div class="validate"></div>
-          </div>
-          <div class="col-md-4 form-group mt-3 mt-md-0">
-            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-            <div class="validate"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 form-group mt-3">
-            <select name="service_id" id="service_id" class="form-select">
-              <option value="">Pilih Pelayanan</option>
-              @foreach ($services as $item)
-                <option value="{{ $item->id }}">{{ $item->nama_service }}</option>
-              @endforeach
-            </select>
-            <div class="validate"></div>
-          </div>
-          <div class="col-md-4 form-group mt-3">
-            <div class="form-group">              
-              <input type="date" name="tanggal" min="2021-05-12" max="2022-01-01" id="datetime" placeholder="Appointment date" class="form-control" onchange="getJSON()">
-          </div>
-          </div>
-          <div class="col-md-4 form-group mt-3">
-            <select name="jam" id="jam" class="form-select">
-              <option value="">Pilih Jam Konsultasi</option>
-              @foreach ($jams as $item)
-              <option id="jam{{ $item->id }}" value="{{ $item->id }}">{{ $item->jam }}</option>
-              @endforeach
-            </select>
-            <div class="validate"></div>
-          </div>
-        </div>
-        <div class="form-group mt-3">
-          <textarea class="form-control" name="messages" rows="5" placeholder="Message (Optional)"></textarea>
-          <div class="validate"></div>
-        </div>        
-        <div class="text-center"><button type="submit">Make an Appointment</button></div>
-      </form>
-
+      <div class="col-md-4 form-group mt-3">
+        <select name="arrival" id="input_arrival" class="form-select" onchange="updateServiceList()">
+          <option value="">Lokasi Tujuan</option>
+          @foreach ($arrivals as $arrival)
+          <option value="{{ $arrival->arrival }}">{{ $arrival->arrival }}</option>
+          @endforeach
+        </select>
+        <div class="validate"></div>
+      </div>
     </div>
+    <div id="table-content" class="mt-5">
+      <div class="table-back employee-office-table mt-4">
+        <div class="table-responsive">
+          <table id="data-table" class="table custom-table table-hover table-hover">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Layanan</th>
+                <th>Tanggal / Waktu</th>
+                <th>Price</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              @foreach ($services as $key => $service)
+              <tr>
+                <td>{{ $key + 1 }}</td>
+                <td>{{ $service->nama_service }}</td>
+                <td>{{ date('d M Y, h:i:a', strtotime($service->date)) }}</td>
+                <td>Rp{{ number_format($service->price, 0, ',', '.') }}</td>
+                <td>
+                  <button type="submit" class="btn btn-sm">Make a Trip</button>
+                </td>
+              </tr>
+              @endforeach
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<form action="/user/booking-request" method="post" id="submit_booking">
+  @csrf
+  <input type="hidden" id="get_name" name="name">
+  <input type="hidden" id="get_email" name="email">
+  <input type="hidden" id="get_phone" name="phone">
+  <input type="hidden" id="get_service_id" name="service_id">
+</form>
+
 @section('script')
-  <script type="text/javascript">
-    var datetime = new Date();
-    var day = datetime.getDate();
-    if (day < 10){
-        day = `0${day}`;
-    }
-    var month = datetime.getMonth() + 1;
-    if (month < 10){
-        month = `0${month}`;
-    }
-    var year = datetime.getFullYear();
-    var date = `${year}-${month}-${day}`;
-
-    document.getElementById("datetime").setAttribute("min", date);
-
-    $('#service_id').on('change', function() {
-      $('#datetime').val(null);
-    });
-
-    function getJSON() {
-
-        var service_id = $('#service_id').val()            
-        console.log(service_id);
-        
-        $('#jam option').show();
-
-        var datepick = new Date($('#datetime').val());
-        var day = datepick.getDate();
-        if (day < 10){
-            day = `0${day}`;
-        }
-        var month = datetime.getMonth() + 1;
-        if (month < 10){
-            month = `0${month}`;
-        }
-        var year = datetime.getFullYear();
-        var pickdate = `${year}-${month}-${day}`;
-
-        console.log(pickdate);
-        
-        $.ajax({
-            url: '/booking/get-dataBooking',
+<script>
+  function updateServiceList()
+  {
+    var depature = $('#input_depature').val()
+    var arrival = $('#input_arrival').val()
+    
+    $.ajax({
+            url: "/get_service_list",
             type: 'get',
-            dataType: 'json',
             data: {
-                pickdate,
-                service_id
+                depature,
+                arrival
             },
-            success: function (response) {
-                if(response) {
-                    for (i = 0; i < response['data'].length; i++) {
-                        var tanggal = response['data'][i].tanggal;
-                        var service = response['data'][i].service_id;
-                        var status = response['data'][i].status;                        
-                        if (pickdate == tanggal & service_id == service) { 
-                          var jam = response['data'][i].jam_id;
-                          $(`#jam${jam}`).hide();                                      
-                        } else {                            
-                          var jam = response['data'][i].jam_id;
-                          $(`#jam${jam}`).show(); 
-                        }
-                      }                        
-                    }
-                                      
-                console.log(response);
+            cache: false,
+            dataType: 'json',
+            success: function(data) {                
+               $('#table-content').html(data.view);    
+               console.log(data)            
+            },
+            beforeSend: function() {
+                $('#table-content').html('<p align="center">Loading...</p>');
             }
         });
-    }
-    
-  </script>
+  }
+
+  function submitBooking(service_id)
+  {
+    var name = $('#name').val()
+    var email = $('#email').val()
+    var phone = $('#phone').val()  
+    $('#get_name').val(name)  
+    $('#get_email').val(email)  
+    $('#get_phone').val(phone)  
+    $('#get_service_id').val(service_id)  
+
+    $( "#submit_booking" ).submit();
+  }
+</script>
 @endsection

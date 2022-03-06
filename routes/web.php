@@ -21,7 +21,7 @@ use App\Http\Controllers\TransactionController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('booking/get-dataBooking', [HomeController::class, 'getDataBooking']);
+Route::get('get_service_list', [HomeController::class, 'getServiceLists']);
 
 Route::get('admin/admin-login', [AdminController::class, 'index'])->name('admin-login');
 Route::post('admin/store-admin-login', [AdminController::class, 'store']);

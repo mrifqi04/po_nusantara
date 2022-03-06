@@ -3,7 +3,7 @@
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-				<title>Bidan</title>
+				<title>PO Nusantara</title>
 
 		<link rel="icon" type="image/x-icon" href="{{asset('vendor/lakers')}}/img/favicon.png">
 		

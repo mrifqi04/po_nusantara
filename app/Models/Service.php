@@ -11,7 +11,10 @@ class Service extends Model
 
     protected $fillable = [
         'nama_service', 
-        'deskripsi',
-        'payment'
+        'date',
+        'payment',
+        'depature',
+        'arrival',
+        'price'
     ];
 }

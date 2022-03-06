@@ -26,12 +26,12 @@
                                                 </a>
                                             </li>                                            
                                         @endif                            
-                                        <li class="mr-1">
+                                        {{-- <li class="mr-1">
                                             <a href="/admin/operationals" class="btn-ctm-space text-dark header_class">
                                                 <span class="lnr lnr-user pr-0 pr-lg-2"></span>
                                                 <span class="d-none d-lg-inline">Jam Operasional</span>
                                             </a>
-                                        </li>                                                                          
+                                        </li>                                                                           --}}
                                         <li class="mr-1">
                                             <a href="/admin/booking-request" class="btn-ctm-space text-dark header_class">
                                                 <span class="lnr lnr-calendar-full pr-0 pr-lg-2"></span>

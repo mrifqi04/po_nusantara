@@ -16,45 +16,77 @@ class HomeController extends Controller
         $jams = JamOperasional::all();        
         $services = Service::all();
 
-        return view('frontend.homepage', compact('jams', 'services'));
+        $depatures = Service::select('depature')->distinct()->get();        
+        $arrivals = Service::select('arrival')->distinct()->get();        
+
+        return view('frontend.homepage', 
+        compact(
+            'jams', 
+            'services', 
+            'depatures',
+            'arrivals'
+        ));
     }
 
     function bookingRequest(Request $request) {
-        // dd($request);
+        
         $request->validate([
             'name' => 'required|string',
             'email' => 'required|email',
-            'phone' => 'required|min:11|max:13',
-            'tanggal' => 'required',
-            'jam' => 'required',
+            'phone' => 'required|min:11|max:13',            
             'service_id' => 'required',
-        ]);
+        ]);        
 
         Booking::create([
             'user_id' => Auth::user()->id,
             'name' => $request->name,
             'email' => $request->email,
-            'phone' => $request->phone,
-            'tanggal' => $request->tanggal,
-            'jam_id' => $request->jam,
-            'service_id' => $request->service_id,
-            'messages' => $request->messages,
+            'phone' => $request->phone,                        
+            'service_id' => $request->service_id,            
             'status' => 'PENDING',
         ]);
 
         session()->flash('msg','Permintaan booking sudah kami terima');
 
+
         return redirect('/');
     }
 
-    function getDataBooking(Request $request) {
+    function getServiceLists(Request $request) {
+        
+        $depature = $request->depature;
+        $arrival = $request->arrival;
+        
+        if ($depature) {
+            $get_data = Service::where('depature', $depature)->get();
+        } else {
+            $get_data = Service::where('arrival', $arrival)->get();
+        }
 
-        $jam['data'] = Booking::where('status', 'PENDING')
-        ->orWhere('status', 'ACCEPTED')
-        ->where('service_id', $request->service_id)
-        ->get();
+        if ($depature && $arrival) {
+            $get_data = Service::where('depature', $depature)
+            ->where('arrival', $arrival)
+            ->get();
+        }
 
-        echo json_encode($jam);
+        if ((!$depature && !$arrival) || (!$arrival && !$depature)) {
+            $get_data = Service::all();
+        }
+
+        if ($get_data) {
+            $services = $get_data;
+        } else {
+            $services = null;
+        }        
+
+        $table_view = view('partials.frontend.table.service_list', compact('services'))->render();        
+
+        $data = array(
+            'data' => $services,
+            'view' => $table_view
+        );        
+
+        echo json_encode($data);
         exit;
     }
 

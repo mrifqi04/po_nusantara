@@ -15,11 +15,14 @@ class ServiceController extends Controller
     }
 
     function store(Request $request) {
-        
+        // dd($request);
         // Validate Request
         $request->validate([
             'nama_service' => 'required',
-            'deskripsi' => 'required'
+            'depature' => 'required',
+            'arrival' => 'required',
+            'date' => 'required',            
+            'price' => 'required',            
         ]);
 
         // Store request
