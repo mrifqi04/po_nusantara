@@ -2,9 +2,7 @@
   <div class="container">
     <div class="section-title">
       <h2>Make a Trip</h2>
-      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in
-        iste officiis commodi quidem hic quas.</p>
+      <p>Anda bisa memesan dengan mengisi form yang kami sediakan dibawah ini.</p>
     </div>
     <div class="row">
       <div class="col-md-4 form-group">

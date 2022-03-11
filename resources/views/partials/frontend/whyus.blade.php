@@ -6,8 +6,7 @@
           <div class="content">
             <h3>Why Choose PO Nusantara?</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-              Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+              Kami akan memberikan kenyamanan kepada pelanggan untuk berpergian dengan aman sesuai dengan tujuan. Kami membuat kemudahan kepada pelanggan dengan memesan tiket bus secara online.
             </p>
             <div class="text-center">
               <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
